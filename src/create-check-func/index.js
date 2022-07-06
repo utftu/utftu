@@ -1,6 +1,10 @@
-function createLazyFunc(func, getDeps = () => []) {
-  let prevDeps = undefined;
-  let prevResult = undefined;
+function createLazyFunc(func, checkRun) {
+  return (...args) => {
+  
+  }
+  
+  let prevDeps = null;
+  let prevResult = null;
   return function (...args) {
     const deps = getDeps();
     if (!prevDeps || !deps) {
