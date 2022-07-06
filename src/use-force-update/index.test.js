@@ -2,29 +2,29 @@
  * @jest-environment jsdom
  */
 
-import React, {createElement,} from 'react'
-import { act } from 'react-dom/test-utils';
-import {render} from '@testing-library/react'
-import '@testing-library/jest-dom'
-import useForceUpdate from './index.js'
+import React, {createElement} from 'react';
+import {act} from 'react-dom/test-utils';
+import {render} from '@testing-library/react';
+import '@testing-library/jest-dom';
+import useForceUpdate from './index.js';
 
 it('loads and displays greeting', async () => {
   let countRender = 0;
-  let forceUpdate = null
+  let forceUpdate = null;
   function Test() {
-    countRender++
-    forceUpdate = useForceUpdate()
-    return createElement('div', null,'hello')
+    countRender++;
+    forceUpdate = useForceUpdate();
+    return createElement('div', null, 'hello');
   }
-  render(createElement(Test))
-  expect(countRender).toBe(1)
+  render(createElement(Test));
+  expect(countRender).toBe(1);
   act(() => {
-    forceUpdate()
-  })
-  expect(countRender).toBe(2)
+    forceUpdate();
+  });
+  expect(countRender).toBe(2);
   act(() => {
-    forceUpdate()
-    forceUpdate()
-  })
-  expect(countRender).toBe(3)
-})
+    forceUpdate();
+    forceUpdate();
+  });
+  expect(countRender).toBe(3);
+});

@@ -1,7 +1,7 @@
 function awaitTime(time = 0) {
   return new Promise((resolve) => {
-    setTimeout(resolve, time)
-  })
+    setTimeout(resolve, time);
+  });
 }
 
-export default awaitTime
+export default awaitTime;

@@ -10,8 +10,8 @@ const entries = [
   {name: 'use-store', external: ['react']},
   {name: 'global', external: ['react']},
   {name: 'await-time', external: []},
-  {name: 'create-controlled-promise', external: []}
-]
+  {name: 'create-controlled-promise', external: []},
+];
 
 for (const {name, external} of entries) {
   fs.cpSync(
@@ -19,7 +19,7 @@ for (const {name, external} of entries) {
     path.join(__dirname, '../dist', name, 'cjs/package.json'),
     {recursive: true}
   );
-  
+
   fs.cpSync(
     path.join(__dirname, '../static/path.cjs'),
     path.join(__dirname, '../dist', name, 'cjs/index.js'),
@@ -63,4 +63,4 @@ for (const {name, external} of entries) {
   });
 }
 
-export default 'hehe'
+export default 'hehe';

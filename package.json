@@ -6,7 +6,8 @@
   "type": "module",
   "scripts": {
     "test": "node --experimental-vm-modules node_modules/jest/bin/jest.js",
-    "build": "node ./scripts/build.js"
+    "build": "node ./scripts/build.js",
+    "format": "prettier --write ."
   },
   "exports": {
     "./awaitTime": {
@@ -93,7 +94,8 @@
     "@jest/globals": "^28.1.2",
     "@testing-library/jest-dom": "^5.16.4",
     "esbuild": "^0.14.48",
-    "jest": "^28.1.2"
+    "jest": "^28.1.2",
+    "prettier": "^2.7.1"
   },
   "devDependencies": {
     "@testing-library/react": "^13.3.0",

@@ -1,15 +1,15 @@
-import awaitTime from '../await-time/index.js'
+import awaitTime from '../await-time/index.js';
 
 function createControlledPromise(cb) {
   let resolve, reject;
   const promise = new Promise((promiseResolve, promiseReject) => {
-    resolve = promiseResolve
-    reject = promiseReject
+    resolve = promiseResolve;
+    reject = promiseReject;
     if (cb) {
-      cb(resolve, reject)
+      cb(resolve, reject);
     }
-  })
-  return [promise, {resolve, reject}]
+  });
+  return [promise, {resolve, reject}];
 }
 
 // const [promise, control] = createControlledPromise()
@@ -25,4 +25,4 @@ function createControlledPromise(cb) {
 // control.resolve()
 // console.log('-----', 'after')
 
-export default createControlledPromise
+export default createControlledPromise;
