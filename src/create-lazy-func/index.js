@@ -1,4 +1,4 @@
-function lazyFunc(func, getDeps = () => []) {
+function createLazyFunc(func, getDeps = () => []) {
   let prevDeps = null;
   let prevResult = null;
   return function (...args) {
@@ -35,4 +35,4 @@ function lazyFunc(func, getDeps = () => []) {
   };
 }
 
-export default lazyFunc;
+export default createLazyFunc;
