@@ -1,5 +1,5 @@
-function createLazyFunc(func, getDeps = () => []) {
-  let prevDeps = undefined;
+function createLazyFunc(func, getDeps = () => [], initDeps) {
+  let prevDeps = initDeps;
   let prevResult = undefined;
   return function (...args) {
     const deps = getDeps();

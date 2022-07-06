@@ -1,8 +1,8 @@
 import lazyFunc from './index.js';
-import {jest} from '@jest/globals';
+import {expect, jest} from '@jest/globals';
 
 describe('lazy-func', () => {
-  it('', () => {
+  it('base case', () => {
     let deps = 0;
     const listener = jest.fn((symbol) => symbol);
     const lazeListener = lazyFunc(listener, () => [deps]);
@@ -20,5 +20,12 @@ describe('lazy-func', () => {
     lazeListener('4');
     expect(listener.mock.calls.length).toBe(2);
     expect(listener.mock.calls[1][0]).toBe('3');
+  });
+  it('init deps', () => {
+    let deps = 0;
+    const listener = jest.fn((symbol) => symbol);
+    const lazyListener = lazyFunc(listener, () => [deps], [deps]);
+    lazyListener();
+    expect(listener.mock.calls.length).toBe(0);
   });
 });
