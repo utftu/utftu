@@ -1,14 +1,5 @@
-import {ReactNode} from "react";
+import {FC} from 'react';
 
-type Props<T> = {
-  show: boolean,
-  children: ReactNode
-}
+type Show = FC<{show?: boolean}>;
 
-
-
-function Show<T>(props: Props<any>)
-
-type useForceUpdate = () => () => void
-
-export default useForceUpdate
+export default Show;

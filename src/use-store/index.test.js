@@ -8,7 +8,7 @@ import '@testing-library/jest-dom';
 import {render} from '@testing-library/react';
 import useStore from './index.js';
 
-it('loads and displays greeting', async () => {
+it('use store', async () => {
   const stores = [];
 
   let countRender = 0;

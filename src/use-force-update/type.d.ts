@@ -1,3 +1,3 @@
-type useForceUpdate = () => () => void
+type useForceUpdate = () => () => void;
 
-export default useForceUpdate
+export default useForceUpdate;

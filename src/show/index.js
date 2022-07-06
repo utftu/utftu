@@ -1,9 +1,9 @@
 function Show(props) {
   if (!props.show) {
-    return null
+    return null;
   }
-  
-  return props.children
+
+  return props.children;
 }
 
 export default Show;

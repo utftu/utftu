@@ -8,7 +8,7 @@ import {render} from '@testing-library/react';
 import '@testing-library/jest-dom';
 import useForceUpdate from './index.js';
 
-it('loads and displays greeting', async () => {
+it('use force update', async () => {
   let countRender = 0;
   let forceUpdate = null;
   function Test() {
