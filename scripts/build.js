@@ -62,5 +62,3 @@ for (const {name, external} of entries) {
     outfile: path.join(__dirname, '../dist', name, 'cjs/dev.js'),
   });
 }
-
-export default 'hehe';
