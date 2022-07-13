@@ -8,9 +8,9 @@ const entries = [
   {name: 'create-lazy-func', external: []},
   {name: 'use-force-update', external: ['react']},
   {name: 'use-store', external: ['react']},
-  {name: 'global', external: ['react']},
   {name: 'await-time', external: []},
   {name: 'create-controlled-promise', external: []},
+  {name: 'float', external: []},
 ];
 
 for (const {name, external} of entries) {
