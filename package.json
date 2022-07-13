@@ -70,17 +70,17 @@
       "import": "./dist/create-lazy-func/esm/prod.js",
       "require": "./dist/create-lazy-func/cjs/prod.js"
     },
-    "./global": {
+    "./float": {
       "development": {
-        "import": "./dist/global/esm/dev.js",
-        "require": "./dist/global/cjs/dev.js"
+        "import": "./dist/float/esm/dev.js",
+        "require": "./dist/float/cjs/dev.js"
       },
       "production": {
-        "import": "./dist/global/esm/prod.js",
-        "require": "./dist/global/cjs/prod.js"
+        "import": "./dist/float/esm/prod.js",
+        "require": "./dist/float/cjs/prod.js"
       },
-      "import": "./dist/global/esm/prod.js",
-      "require": "./dist/global/cjs/prod.js"
+      "import": "./dist/float/esm/prod.js",
+      "require": "./dist/float/cjs/prod.js"
     },
     "./*": "./*"
   },
