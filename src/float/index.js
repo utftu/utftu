@@ -37,8 +37,3 @@ class Float {
 }
 
 export default Float;
-
-// console.log('-----', '', 0.1 * 0.2);
-// console.log('-----', '', Float.mul(0.1, 0.2));
-// console.log('-----', '', 0.3 - 0.1);
-// console.log('-----', '', Float.sub(0.3, 0.1));
