@@ -1,5 +1,3 @@
-import type useForceUpdate from '../use-force-update/useForceUpdate';
+declare function useStore<T>(): [T, () => void];
 
-type useStore<T> = () => [T, useForceUpdate];
-
-export default useForceUpdate;
+export default useStore;

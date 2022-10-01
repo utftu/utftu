@@ -127,6 +127,7 @@
     "@types/lodash": "^4.14.186",
     "@types/react": "^18.0.15",
     "jest-environment-jsdom": "^28.1.2",
+    "kebab-to-camel": "^1.0.1",
     "react": "^18.2.0",
     "react-dom": "^18.2.0",
     "react-test-renderer": "^18.2.0"

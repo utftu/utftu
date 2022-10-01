@@ -6,7 +6,7 @@ import React, {createElement} from 'react';
 import {act} from 'react-dom/test-utils';
 import {render} from '@testing-library/react';
 import '@testing-library/jest-dom';
-import useForceUpdate from './useForceUpdate.js';
+import useForceUpdate from './use-force-update.js';
 import {act} from 'react-dom/test-utils';
 import {it, expect} from '@jest/globals';
 

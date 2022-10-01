@@ -1,6 +1,7 @@
 import esbuild from 'esbuild';
 import path from 'node:path';
 import fs from 'node:fs';
+import kebabToCamel from 'kebab-to-camel';
 
 const __dirname = path.dirname(new URL(import.meta.url).pathname);
 
@@ -23,6 +24,18 @@ for (const {name, external} of entries) {
   fs.cpSync(
     path.join(__dirname, '../static/path.cjs'),
     path.join(__dirname, '../dist', name, 'cjs/index.js'),
+    {recursive: true}
+  );
+
+  fs.cpSync(
+    path.join(__dirname, '../static/path.cjs'),
+    path.join(__dirname, '../dist', name, 'cjs/index.js'),
+    {recursive: true}
+  );
+
+  fs.cpSync(
+    path.join(__dirname, '../src/', name, `${name}.d.ts`),
+    path.join(__dirname, '..', `${kebabToCamel(name)}.d.ts`),
     {recursive: true}
   );
 

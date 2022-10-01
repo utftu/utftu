@@ -9,6 +9,7 @@ specifiers:
   esbuild: ^0.14.48
   jest: ^28.1.2
   jest-environment-jsdom: ^28.1.2
+  kebab-to-camel: ^1.0.1
   lodash: ^4.17.21
   prettier: ^2.7.1
   react: ^18.2.0
@@ -28,6 +29,7 @@ devDependencies:
   '@types/lodash': 4.14.186
   '@types/react': 18.0.15
   jest-environment-jsdom: 28.1.2
+  kebab-to-camel: 1.0.1
   react: 18.2.0
   react-dom: 18.2.0_react@18.2.0
   react-test-renderer: 18.2.0_react@18.2.0
@@ -2319,6 +2321,10 @@ packages:
     engines: {node: '>=6'}
     hasBin: true
     dev: false
+
+  /kebab-to-camel/1.0.1:
+    resolution: {integrity: sha512-77nnm5ysg1vKOth63YeQ6QiVC3MFOJdCw80DY2ZhEOT8VybtVzs7fUCxLZnC1f2ModouUFIQPX2x2lXfESAkPQ==}
+    dev: true
 
   /kleur/3.0.3:
     resolution: {integrity: sha512-eTIzlVOSUR+JxdDFepEYcBMtZ9Qqdef+rnzWdRZuMbOywu5tO2w2N7rqjoANZ5k9vywhL6Br1VRjUIgTQx4E8w==}

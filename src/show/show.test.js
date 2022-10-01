@@ -7,7 +7,7 @@ import {act} from 'react-dom/test-utils';
 import {render} from '@testing-library/react';
 import '@testing-library/jest-dom';
 import Show from './show.js';
-import useForceUpdate from '../use-force-update/useForceUpdate.js';
+import useForceUpdate from '../use-force-update/use-force-update.js';
 
 it('show', async () => {
   let showChild = true;
