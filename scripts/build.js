@@ -2,6 +2,7 @@ import esbuild from 'esbuild';
 import path from 'node:path';
 import fs from 'node:fs';
 import kebabToCamel from 'kebab-to-camel';
+import __ from 'lodash/fp/__.js';
 
 const __dirname = path.dirname(new URL(import.meta.url).pathname);
 
@@ -14,6 +15,25 @@ const entries = [
   {name: 'float', external: []},
   {name: 'delayed-calls', external: []},
 ];
+
+const packageJsonPath = path.join(__dirname, '../package.json');
+const packageJson = JSON.parse(fs.readFileSync(packageJsonPath).toString());
+packageJson.exports = entries.reduce((exports, {name}) => {
+  exports[name] = {
+    development: {
+      import: `./dist/${name}/esm/dev.js`,
+      require: `./dist/${name}/cjs/dev.js`,
+    },
+    production: {
+      import: `./dist/${name}/esm/prod.js`,
+      require: `./dist/${name}/cjs/prod.js`,
+    },
+    import: `./dist/${name}/esm/prod.js`,
+    require: `./dist/${name}/cjs/prod.js`,
+  };
+  return exports;
+}, {});
+fs.writeFileSync(packageJsonPath, JSON.stringify(packageJson, null, 2));
 
 for (const {name, external} of entries) {
   fs.cpSync(
@@ -35,7 +55,7 @@ for (const {name, external} of entries) {
 
   fs.cpSync(
     path.join(__dirname, '../src/', name, `${name}.d.ts`),
-    path.join(__dirname, '..', `${kebabToCamel(name)}.d.ts`),
+    path.join(__dirname, '..', `${name}.d.ts`),
     {recursive: true}
   );
 

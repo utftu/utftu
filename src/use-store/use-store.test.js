@@ -3,10 +3,11 @@
  */
 
 import React, {createElement} from 'react';
+import {it, expect} from '@jest/globals';
 import {act} from 'react-dom/test-utils';
-import '@testing-library/jest-dom';
 import {render} from '@testing-library/react';
 import useStore from './use-store.js';
+import '@testing-library/jest-dom';
 
 it('use store', async () => {
   const stores = [];

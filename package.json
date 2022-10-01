@@ -9,111 +9,13 @@
     "build": "node ./scripts/build.js",
     "format": "prettier --write ."
   },
-  "exports": {
-    "./waitTime": {
-      "development": {
-        "import": "./dist/wait-time/esm/dev.js",
-        "require": "./dist/wait-time/cjs/dev.js"
-      },
-      "production": {
-        "import": "./dist/wait-time/esm/prod.js",
-        "require": "./dist/wait-time/cjs/prod.js"
-      },
-      "import": "./dist/wait-time/esm/prod.js",
-      "require": "./dist/wait-time/cjs/prod.js"
-    },
-    "./delayedCalls": {
-      "development": {
-        "import": "./dist/await-time/esm/dev.js",
-        "require": "./dist/await-time/cjs/dev.js"
-      },
-      "production": {
-        "import": "./dist/await-time/esm/prod.js",
-        "require": "./dist/await-time/cjs/prod.js"
-      },
-      "import": "./dist/await-time/esm/prod.js",
-      "require": "./dist/await-time/cjs/prod.js"
-    },
-    "./createControlledPromise": {
-      "development": {
-        "import": "./dist/create-controlled-promise/esm/dev.js",
-        "require": "./dist/create-controlled-promise/cjs/dev.js"
-      },
-      "production": {
-        "import": "./dist/create-controlled-promise/esm/prod.js",
-        "require": "./dist/create-controlled-promise/cjs/prod.js"
-      },
-      "import": "./dist/create-controlled-promise/esm/prod.js",
-      "require": "./dist/create-controlled-promise/cjs/prod.js"
-    },
-    "./useForceUpdate": {
-      "development": {
-        "import": "./dist/use-force-update/esm/dev.js",
-        "require": "./dist/use-force-update/cjs/dev.js"
-      },
-      "production": {
-        "import": "./dist/use-force-update/esm/prod.js",
-        "require": "./dist/use-force-update/cjs/prod.js"
-      },
-      "import": "./dist/use-force-update/esm/prod.js",
-      "require": "./dist/use-force-update/cjs/prod.js"
-    },
-    "./useStore": {
-      "development": {
-        "import": "./dist/use-store/esm/dev.js",
-        "require": "./dist/use-store/cjs/dev.js"
-      },
-      "production": {
-        "import": "./dist/use-store/esm/prod.js",
-        "require": "./dist/use-store/cjs/prod.js"
-      },
-      "import": "./dist/use-store/esm/prod.js",
-      "require": "./dist/use-store/cjs/prod.js"
-    },
-    "./createLazyFunc": {
-      "development": {
-        "import": "./dist/create-lazy-func/esm/dev.js",
-        "require": "./dist/create-lazy-func/cjs/dev.js"
-      },
-      "production": {
-        "import": "./dist/create-lazy-func/esm/prod.js",
-        "require": "./dist/create-lazy-func/cjs/prod.js"
-      },
-      "import": "./dist/create-lazy-func/esm/prod.js",
-      "require": "./dist/create-lazy-func/cjs/prod.js"
-    },
-    "./float": {
-      "development": {
-        "import": "./dist/float/esm/dev.js",
-        "require": "./dist/float/cjs/dev.js"
-      },
-      "production": {
-        "import": "./dist/float/esm/prod.js",
-        "require": "./dist/float/cjs/prod.js"
-      },
-      "import": "./dist/float/esm/prod.js",
-      "require": "./dist/float/cjs/prod.js"
-    },
-    "./show": {
-      "development": {
-        "import": "./dist/show/esm/dev.js",
-        "require": "./dist/show/cjs/dev.js"
-      },
-      "production": {
-        "import": "./dist/show/esm/prod.js",
-        "require": "./dist/show/cjs/prod.js"
-      },
-      "import": "./dist/show/esm/prod.js",
-      "require": "./dist/show/cjs/prod.js"
-    },
-    "./*": "./*"
-  },
-  "files": [
-    "dist/**/*"
-  ],
   "keywords": [],
   "author": "",
   "license": "ISC",
+  "files": [
+    "dist/**/*",
+    "*.d.ts"
+  ],
   "dependencies": {
     "@jest/globals": "^28.1.2",
     "@testing-library/jest-dom": "^5.16.4",
@@ -131,5 +33,91 @@
     "react": "^18.2.0",
     "react-dom": "^18.2.0",
     "react-test-renderer": "^18.2.0"
+  },
+  "exports": {
+    "create-lazy-func": {
+      "development": {
+        "import": "./dist/create-lazy-func/esm/dev.js",
+        "require": "./dist/create-lazy-func/cjs/dev.js"
+      },
+      "production": {
+        "import": "./dist/create-lazy-func/esm/prod.js",
+        "require": "./dist/create-lazy-func/cjs/prod.js"
+      },
+      "import": "./dist/create-lazy-func/esm/prod.js",
+      "require": "./dist/create-lazy-func/cjs/prod.js"
+    },
+    "use-force-update": {
+      "development": {
+        "import": "./dist/use-force-update/esm/dev.js",
+        "require": "./dist/use-force-update/cjs/dev.js"
+      },
+      "production": {
+        "import": "./dist/use-force-update/esm/prod.js",
+        "require": "./dist/use-force-update/cjs/prod.js"
+      },
+      "import": "./dist/use-force-update/esm/prod.js",
+      "require": "./dist/use-force-update/cjs/prod.js"
+    },
+    "use-store": {
+      "development": {
+        "import": "./dist/use-store/esm/dev.js",
+        "require": "./dist/use-store/cjs/dev.js"
+      },
+      "production": {
+        "import": "./dist/use-store/esm/prod.js",
+        "require": "./dist/use-store/cjs/prod.js"
+      },
+      "import": "./dist/use-store/esm/prod.js",
+      "require": "./dist/use-store/cjs/prod.js"
+    },
+    "wait-time": {
+      "development": {
+        "import": "./dist/wait-time/esm/dev.js",
+        "require": "./dist/wait-time/cjs/dev.js"
+      },
+      "production": {
+        "import": "./dist/wait-time/esm/prod.js",
+        "require": "./dist/wait-time/cjs/prod.js"
+      },
+      "import": "./dist/wait-time/esm/prod.js",
+      "require": "./dist/wait-time/cjs/prod.js"
+    },
+    "create-controlled-promise": {
+      "development": {
+        "import": "./dist/create-controlled-promise/esm/dev.js",
+        "require": "./dist/create-controlled-promise/cjs/dev.js"
+      },
+      "production": {
+        "import": "./dist/create-controlled-promise/esm/prod.js",
+        "require": "./dist/create-controlled-promise/cjs/prod.js"
+      },
+      "import": "./dist/create-controlled-promise/esm/prod.js",
+      "require": "./dist/create-controlled-promise/cjs/prod.js"
+    },
+    "float": {
+      "development": {
+        "import": "./dist/float/esm/dev.js",
+        "require": "./dist/float/cjs/dev.js"
+      },
+      "production": {
+        "import": "./dist/float/esm/prod.js",
+        "require": "./dist/float/cjs/prod.js"
+      },
+      "import": "./dist/float/esm/prod.js",
+      "require": "./dist/float/cjs/prod.js"
+    },
+    "delayed-calls": {
+      "development": {
+        "import": "./dist/delayed-calls/esm/dev.js",
+        "require": "./dist/delayed-calls/cjs/dev.js"
+      },
+      "production": {
+        "import": "./dist/delayed-calls/esm/prod.js",
+        "require": "./dist/delayed-calls/cjs/prod.js"
+      },
+      "import": "./dist/delayed-calls/esm/prod.js",
+      "require": "./dist/delayed-calls/cjs/prod.js"
+    }
   }
 }
