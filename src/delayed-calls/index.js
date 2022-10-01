@@ -1,3 +1,3 @@
-import delayedCalls from './delayed-calls.js';
+import DelayedCalls from './delayed-calls.js';
 
-export default delayedCalls;
+export default DelayedCalls;

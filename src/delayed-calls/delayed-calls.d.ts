@@ -1,5 +1,5 @@
-declare class DelayedCall {
+declare class DelayedCalls {
   add(key: any, cb: () => void);
 }
 
-export default DelayedCall;
+export default DelayedCalls;
