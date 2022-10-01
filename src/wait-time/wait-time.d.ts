@@ -1,3 +1,3 @@
-type awaitTime = (ms: number) => Promise<void>;
+declare const waitTime: (ms: number) => Promise<void>;
 
-export default awaitTime;
+export default waitTime;

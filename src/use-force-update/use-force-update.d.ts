@@ -1,3 +1,3 @@
-type useForceUpdate = () => () => void;
+declare const useForceUpdate: () => () => void;
 
 export default useForceUpdate;

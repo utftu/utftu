@@ -1,5 +1,5 @@
 import {FC, PropsWithChildren} from 'react';
 
-type Show = FC<PropsWithChildren<{show?: any}>>;
+declare const Show: FC<PropsWithChildren<{show?: any}>>;
 
 export default Show;
