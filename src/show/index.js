@@ -1,9 +1,3 @@
-function Show(props) {
-  if (!props.show) {
-    return null;
-  }
-
-  return props.children;
-}
+import Show from './show.js';
 
 export default Show;

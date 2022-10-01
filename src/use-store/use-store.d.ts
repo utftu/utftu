@@ -1,4 +1,4 @@
-import type useForceUpdate from '../use-force-update';
+import type useForceUpdate from '../use-force-update/useForceUpdate';
 
 type useStore<T> = () => [T, useForceUpdate];
 

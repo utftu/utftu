@@ -8,9 +8,10 @@ const entries = [
   {name: 'create-lazy-func', external: []},
   {name: 'use-force-update', external: ['react']},
   {name: 'use-store', external: ['react']},
-  {name: 'await-time', external: []},
+  {name: 'wait-time', external: []},
   {name: 'create-controlled-promise', external: []},
   {name: 'float', external: []},
+  {name: 'delayed-calls', external: []},
 ];
 
 for (const {name, external} of entries) {
@@ -19,12 +20,12 @@ for (const {name, external} of entries) {
     path.join(__dirname, '../dist', name, 'cjs/package.json'),
     {recursive: true}
   );
-
   fs.cpSync(
     path.join(__dirname, '../static/path.cjs'),
     path.join(__dirname, '../dist', name, 'cjs/index.js'),
     {recursive: true}
   );
+
   esbuild.build({
     entryPoints: [path.join(__dirname, '../src', name)],
     bundle: true,

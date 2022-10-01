@@ -1,6 +1,6 @@
 import createControlledPromise from './index.js';
 import util from 'node:util';
-import awaitTime from '../await-time/index.js';
+import awaitTime from '../wait-time/wait-time.js';
 
 it('createControlledPromise', async () => {
   const [promise, control] = createControlledPromise();

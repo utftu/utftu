@@ -4,28 +4,29 @@
 
 import React, {createElement} from 'react';
 import {act} from 'react-dom/test-utils';
-import '@testing-library/jest-dom';
 import {render} from '@testing-library/react';
-import useStore from './index.js';
+import '@testing-library/jest-dom';
+import useForceUpdate from './useForceUpdate.js';
+import {act} from 'react-dom/test-utils';
+import {it, expect} from '@jest/globals';
 
-it('use store', async () => {
-  const stores = [];
-
+it('use force update', async () => {
   let countRender = 0;
+  let forceUpdate = null;
   function Test() {
     countRender++;
-    stores.push(useStore({}));
+    forceUpdate = useForceUpdate();
     return createElement('div', null, 'hello');
   }
   render(createElement(Test));
   expect(countRender).toBe(1);
   act(() => {
-    stores.at(-1)[1]();
+    forceUpdate();
   });
   expect(countRender).toBe(2);
   act(() => {
-    stores.at(-1)[1]();
+    forceUpdate();
+    forceUpdate();
   });
   expect(countRender).toBe(3);
-  expect(stores.at(0)[0]).toBe(stores.at(1)[0]);
 });

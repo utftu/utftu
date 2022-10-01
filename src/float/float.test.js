@@ -1,4 +1,4 @@
-import Float from './index.js';
+import Float from './float.js';
 
 describe('float', () => {
   it('plus', () => {

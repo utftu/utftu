@@ -1,9 +1,10 @@
-import awaitTime from './index.js';
+import waitTime from './wait-time.js';
+import {it, expect} from '@jest/globals';
 
 it('awaitTime', async () => {
   const time = 50;
   const start = Date.now();
-  await awaitTime(time);
+  await waitTime(time);
   const end = Date.now();
   const difference = end - start;
   expect(difference >= time).toBe(true);
