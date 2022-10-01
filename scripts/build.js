@@ -1,8 +1,6 @@
 import esbuild from 'esbuild';
 import path from 'node:path';
 import fs from 'node:fs';
-import kebabToCamel from 'kebab-to-camel';
-import __ from 'lodash/fp/__.js';
 
 const __dirname = path.dirname(new URL(import.meta.url).pathname);
 
@@ -19,7 +17,7 @@ const entries = [
 const packageJsonPath = path.join(__dirname, '../package.json');
 const packageJson = JSON.parse(fs.readFileSync(packageJsonPath).toString());
 packageJson.exports = entries.reduce((exports, {name}) => {
-  exports[name] = {
+  exports[`${name}.js`] = {
     development: {
       import: `./dist/${name}/esm/dev.js`,
       require: `./dist/${name}/cjs/dev.js`,
