@@ -31,7 +31,8 @@
     "react-test-renderer": "^18.2.0"
   },
   "exports": {
-    "create-lazy-func.js": {
+    "./*": "./*",
+    "./create-lazy-func.js": {
       "development": {
         "import": "./dist/create-lazy-func/esm/dev.js",
         "require": "./dist/create-lazy-func/cjs/dev.js"
@@ -43,7 +44,7 @@
       "import": "./dist/create-lazy-func/esm/prod.js",
       "require": "./dist/create-lazy-func/cjs/prod.js"
     },
-    "use-force-update.js": {
+    "./use-force-update.js": {
       "development": {
         "import": "./dist/use-force-update/esm/dev.js",
         "require": "./dist/use-force-update/cjs/dev.js"
@@ -55,7 +56,7 @@
       "import": "./dist/use-force-update/esm/prod.js",
       "require": "./dist/use-force-update/cjs/prod.js"
     },
-    "use-store.js": {
+    "./use-store.js": {
       "development": {
         "import": "./dist/use-store/esm/dev.js",
         "require": "./dist/use-store/cjs/dev.js"
@@ -67,7 +68,7 @@
       "import": "./dist/use-store/esm/prod.js",
       "require": "./dist/use-store/cjs/prod.js"
     },
-    "wait-time.js": {
+    "./wait-time.js": {
       "development": {
         "import": "./dist/wait-time/esm/dev.js",
         "require": "./dist/wait-time/cjs/dev.js"
@@ -79,7 +80,7 @@
       "import": "./dist/wait-time/esm/prod.js",
       "require": "./dist/wait-time/cjs/prod.js"
     },
-    "create-controlled-promise.js": {
+    "./create-controlled-promise.js": {
       "development": {
         "import": "./dist/create-controlled-promise/esm/dev.js",
         "require": "./dist/create-controlled-promise/cjs/dev.js"
@@ -91,7 +92,7 @@
       "import": "./dist/create-controlled-promise/esm/prod.js",
       "require": "./dist/create-controlled-promise/cjs/prod.js"
     },
-    "float.js": {
+    "./float.js": {
       "development": {
         "import": "./dist/float/esm/dev.js",
         "require": "./dist/float/cjs/dev.js"
@@ -103,7 +104,7 @@
       "import": "./dist/float/esm/prod.js",
       "require": "./dist/float/cjs/prod.js"
     },
-    "delayed-calls.js": {
+    "./delayed-calls.js": {
       "development": {
         "import": "./dist/delayed-calls/esm/dev.js",
         "require": "./dist/delayed-calls/cjs/dev.js"
