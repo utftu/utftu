@@ -115,6 +115,18 @@
       },
       "import": "./dist/delayed-calls/esm/prod.js",
       "require": "./dist/delayed-calls/cjs/prod.js"
+    },
+    "./ee.js": {
+      "development": {
+        "import": "./dist/ee/esm/dev.js",
+        "require": "./dist/ee/cjs/dev.js"
+      },
+      "production": {
+        "import": "./dist/ee/esm/prod.js",
+        "require": "./dist/ee/cjs/prod.js"
+      },
+      "import": "./dist/ee/esm/prod.js",
+      "require": "./dist/ee/cjs/prod.js"
     }
   }
 }

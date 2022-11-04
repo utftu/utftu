@@ -12,6 +12,7 @@ const entries = [
   {name: 'create-controlled-promise', external: []},
   {name: 'float', external: []},
   {name: 'delayed-calls', external: []},
+  {name: 'ee', external: []},
 ];
 
 const packageJsonPath = path.join(__dirname, '../package.json');
