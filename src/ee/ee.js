@@ -8,12 +8,14 @@ function ee(customEvents) {
       events.get(name).push(cb);
     },
     off(name, cb) {
-      if (events.has(name)) {
-        events.set(
-          name,
-          events.get(name).filter((localCb) => localCb !== cb)
-        );
+      if (!events.has(name)) {
+        return;
       }
+
+      events.set(
+        name,
+        events.get(name).filter((localCb) => localCb !== cb)
+      );
     },
     emit(name, data) {
       if (events.has(name)) {
