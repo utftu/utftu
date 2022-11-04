@@ -19,6 +19,9 @@ function ee(customEvents) {
       if (events.has(name)) {
         events.get(name).forEach((cb) => cb(data));
       }
+      if (name === '*') {
+        return;
+      }
       if (events.has('*')) {
         events.get('*').forEach((cb) => cb(name, data));
       }
