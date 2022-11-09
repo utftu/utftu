@@ -1,5 +1,5 @@
-function ee(customEvents) {
-  const events = customEvents || new Map();
+function ee() {
+  const events = new Map();
   return {
     on(name, cb) {
       if (!events.has(name)) {
@@ -28,6 +28,7 @@ function ee(customEvents) {
         events.get('*').forEach((cb) => cb(name, data));
       }
     },
+    events,
   };
 }
 
