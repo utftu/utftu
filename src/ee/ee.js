@@ -3,8 +3,10 @@ function ee() {
   return {
     on(name, cb) {
       if (!events.has(name)) {
-        events.set(name, []);
+        events.set(name, [cb]);
+        return;
       }
+
       events.get(name).push(cb);
     },
     off(name, cb) {

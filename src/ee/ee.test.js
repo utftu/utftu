@@ -10,9 +10,9 @@ describe('ee', () => {
     const map = new Map();
     const a = jest.fn();
     const b = jest.fn();
-    map.set('foo', [a, b]);
-    const events = ee(map);
-    events.emit('foo');
+    const eeInstance = ee(map);
+    eeInstance.events.set('foo', [a, b]);
+    eeInstance.emit('foo');
     expect(a.mock.calls.length).toBe(1);
     expect(b.mock.calls.length).toBe(1);
   });
