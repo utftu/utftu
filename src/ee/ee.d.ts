@@ -7,7 +7,7 @@ export function emitter<TEvents extends Map<string, AnyHandler[]>>(): {
   on(name: string, cb: AnyHandler);
   off(name: string, cb: AnyHandler);
   emit(name: string, data?: any);
-  events: Map<string, AnyHandler[]>;
+  events: TEvents;
 };
 
 export default emitter;
