@@ -1,0 +1,46 @@
+<style>
+  * {
+    padding: 0;
+    margin: 0;
+  }
+  .header {
+    height: 80px;
+    background-color: purple;
+  }
+  .content {
+    min-height: calc(100vh - 80px);
+    background-color: green;
+  }
+  .textarea {
+    /* height: 2400px; */
+    /* background-color: blue; */
+  }
+  .footer {
+    height: 50px;
+    background-color: red;
+  }
+</style>
+
+<div>
+  <div class="header"></div>
+  <div class="content">
+    <textarea class="textarea"></textarea>
+  </div>
+  <div class="footer"></div>
+
+  <script>
+    const tx = document.getElementsByTagName('textarea');
+    for (let i = 0; i < tx.length; i++) {
+      tx[i].setAttribute(
+        'style',
+        'height:' + tx[i].scrollHeight + 'px;overflow-y:hidden;'
+      );
+      tx[i].addEventListener('input', OnInput, false);
+    }
+
+    function OnInput() {
+      this.style.height = 0;
+      this.style.height = this.scrollHeight + 'px';
+    }
+  </script>
+</div>
