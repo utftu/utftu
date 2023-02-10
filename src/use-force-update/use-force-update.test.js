@@ -2,12 +2,11 @@
  * @jest-environment jsdom
  */
 
-import React, {createElement} from 'react';
+import {createElement} from 'react';
 import {act} from 'react-dom/test-utils';
 import {render} from '@testing-library/react';
 import '@testing-library/jest-dom';
 import useForceUpdate from './use-force-update.js';
-import {it, expect} from '@jest/globals';
 
 it('use force update', async () => {
   let countRender = 0;

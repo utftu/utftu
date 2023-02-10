@@ -1,5 +1,4 @@
 import waitTime from './wait-time.js';
-import {it, expect} from '@jest/globals';
 
 it('awaitTime', async () => {
   const time = 50;

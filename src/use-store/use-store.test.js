@@ -2,8 +2,8 @@
  * @jest-environment jsdom
  */
 
-import React, {createElement} from 'react';
-import {it, expect} from '@jest/globals';
+import {createElement} from 'react';
+
 import {act} from 'react-dom/test-utils';
 import {render} from '@testing-library/react';
 import useStore from './use-store.js';

@@ -1,5 +1,5 @@
-import {describe, it, expect, jest} from '@jest/globals';
 import ee from './ee.js';
+import {vi} from 'vitest';
 
 describe('ee', () => {
   it('function', () => {
@@ -8,8 +8,8 @@ describe('ee', () => {
 
   it('optional event handler map', () => {
     const map = new Map();
-    const a = jest.fn();
-    const b = jest.fn();
+    const a = vi.fn();
+    const b = vi.fn();
     const eeInstance = ee(map);
     eeInstance.events.set('foo', [a, b]);
     eeInstance.emit('foo');
