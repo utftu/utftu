@@ -16,4 +16,11 @@ describe('ee', () => {
     expect(a.mock.calls.length).toBe(1);
     expect(b.mock.calls.length).toBe(1);
   });
+  // describe('on', () => {
+  //   it('', () => {
+
+  //   })
+  //   const e = ee();
+  //   const listener =
+  // });
 });
