@@ -1,7 +1,7 @@
 class EE {
   events = new Map();
   on(name, cb) {
-    if (!events.has(name)) {
+    if (!this.events.has(name)) {
       this.events.set(name, [cb]);
     } else {
       this.events.get(name).push(cb);
@@ -10,7 +10,7 @@ class EE {
     return () => this.off(name, cb);
   }
   off(name, cb) {
-    if (!events.has(name)) {
+    if (!this.events.has(name)) {
       return;
     }
 
