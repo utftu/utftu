@@ -32,8 +32,22 @@ class Float {
 
   static div(float1, float2) {
     const common = Float.getCommon(float1, float2);
-    return (((float1 * common) / (float2 * common)) * common) / common;
+    return (float1 * common) / (float2 * common);
   }
 }
 
-export default Float;
+export function floatAdd(float1, float2) {
+  return Float.add(float1, float2);
+}
+
+export function floatSub(float1, float2) {
+  return Float.sub(float1, float2);
+}
+
+export function floatMul(float1, float2) {
+  return Float.mul(float1, float2);
+}
+
+export function floatDiv(float1, float2) {
+  return Float.div(float1, float2);
+}

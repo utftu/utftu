@@ -1,11 +1,12 @@
 import createControlledPromise from './create-controlled-promise.js';
 import * as util from 'node:util';
-import awaitTime from '../wait-time/wait-time';
+import {waitTime} from '../wait-time/wait-time';
+import {it, expect} from 'vitest';
 
 it('createControlledPromise', async () => {
   const [promise, control] = createControlledPromise();
   expect(util.inspect(promise)).toBe('Promise { <pending> }');
-  await awaitTime(100);
+  await waitTime(100);
 
   expect(util.inspect(promise)).toBe('Promise { <pending> }');
 

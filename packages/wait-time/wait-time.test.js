@@ -1,4 +1,5 @@
-import waitTime from './wait-time.js';
+import {waitTime} from './wait-time.js';
+import {it, expect} from 'vitest';
 
 it('awaitTime', async () => {
   const time = 50;

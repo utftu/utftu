@@ -1,5 +1,6 @@
-import waitTime from '../wait-time/wait-time.js';
-import DelayedCalls from './delayed-calls.js';
+import {waitTime} from '../wait-time/wait-time.js';
+import {DelayedCalls} from './delayed-calls.js';
+import {describe, it, expect} from 'vitest';
 
 describe('delayed calls', () => {
   it('two values', async () => {

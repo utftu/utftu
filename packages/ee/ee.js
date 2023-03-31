@@ -14,7 +14,7 @@ class EE {
       return;
     }
 
-    events.set(
+    this.events.set(
       name,
       this.events.get(name).filter((localCb) => localCb !== cb)
     );
@@ -32,8 +32,6 @@ class EE {
   }
 }
 
-function ee() {
+export function createEventEmitter() {
   return new EE();
 }
-
-export default ee;

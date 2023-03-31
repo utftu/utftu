@@ -1,6 +1,6 @@
 import createControlledPromise from '../create-controlled-promise/create-controlled-promise.js';
 
-class DelayedCalls {
+export class DelayedCalls {
   constructor(batch) {
     this.batch = batch || ((cb) => cb());
   }
@@ -31,5 +31,3 @@ class DelayedCalls {
     });
   }
 }
-
-export default DelayedCalls;

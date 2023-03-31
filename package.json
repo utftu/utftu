@@ -5,7 +5,7 @@
   "main": "index.js",
   "type": "module",
   "scripts": {
-    "test": "node --experimental-vm-modules node_modules/jest/bin/jest.js --runInBand",
+    "test": "vitest",
     "vitest": "vitest",
     "build": "node ./scripts/build.js",
     "format": "prettier --write ."
