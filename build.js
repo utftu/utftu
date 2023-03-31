@@ -1,4 +1,4 @@
-import {readFileSync} from 'fs';
+import {readFileSync, writeFileSync} from 'fs';
 import {build, defineConfig} from 'vite';
 
 class PackageConfig {
@@ -35,11 +35,15 @@ const packages = [
   }),
 ];
 
-// const packageJson = JSON.stringify(readFileSync('./package.json').toString());
-// packageJson.exports = {
-//   ...packageJson.exports,
-//   ...packages
-// };
+const packageJson = JSON.parse(readFileSync('./package.json').toString());
+packageJson.exports = packages.reduce((store, {dir, name}) => {
+  store[`./${name}`] = {
+    import: `${dir}/dist/${name}.js`,
+    require: `${dir}/dist/${name}.cjs`,
+  };
+  return store;
+}, {});
+writeFileSync('./package.json', JSON.stringify(packageJson, null, 2));
 for (const {name, entry, dir, external} of packages) {
   await build({
     build: {
