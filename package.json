@@ -1,6 +1,6 @@
 {
   "name": "utftu",
-  "version": "1.0.17",
+  "version": "1.0.18",
   "description": "",
   "main": "index.js",
   "type": "module",
@@ -36,6 +36,10 @@
     "./delayed-calls": {
       "import": "./packages/delayed-calls/dist/delayed-calls.js",
       "require": "./packages/delayed-calls/dist/delayed-calls.cjs"
+    },
+    "./wait-time": {
+      "import": "./packages/wait-time/dist/wait-time.js",
+      "require": "./packages/wait-time/dist/wait-time.cjs"
     }
   }
 }

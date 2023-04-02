@@ -33,6 +33,10 @@ const packages = [
     name: 'delayed-calls',
     external: [],
   }),
+  new PackageConfig({
+    name: 'wait-time',
+    external: [],
+  }),
 ];
 
 const packageJson = JSON.parse(readFileSync('./package.json').toString());
