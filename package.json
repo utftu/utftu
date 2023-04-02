@@ -1,6 +1,6 @@
 {
   "name": "utftu",
-  "version": "1.0.18",
+  "version": "1.0.19",
   "description": "",
   "main": "index.js",
   "type": "module",
@@ -21,9 +21,9 @@
     "vitest": "^0.28.4"
   },
   "exports": {
-    "./create-controlled-promise": {
-      "import": "./packages/create-controlled-promise/dist/create-controlled-promise.js",
-      "require": "./packages/create-controlled-promise/dist/create-controlled-promise.cjs"
+    "./controlled-promise": {
+      "import": "./packages/controlled-promise/dist/controlled-promise.js",
+      "require": "./packages/controlled-promise/dist/controlled-promise.cjs"
     },
     "./ee": {
       "import": "./packages/ee/dist/ee.js",

@@ -18,7 +18,7 @@ class PackageConfig {
 
 const packages = [
   new PackageConfig({
-    name: 'create-controlled-promise',
+    name: 'controlled-promise',
     external: [],
   }),
   new PackageConfig({

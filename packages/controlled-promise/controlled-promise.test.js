@@ -1,6 +1,6 @@
-import createControlledPromise from './create-controlled-promise.js';
+import {createControlledPromise} from './controlled-promise.js';
 import * as util from 'node:util';
-import {waitTime} from '../wait-time/wait-time';
+import {waitTime} from '../wait-time/wait-time.js';
 import {it, expect} from 'vitest';
 
 it('createControlledPromise', async () => {

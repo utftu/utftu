@@ -1,4 +1,4 @@
-function createControlledPromise() {
+export function createControlledPromise() {
   let resolve;
   let reject;
   const promise = new Promise((promiseResolve, promiseReject) => {
@@ -7,5 +7,3 @@ function createControlledPromise() {
   });
   return [promise, {resolve, reject}];
 }
-
-export default createControlledPromise;
