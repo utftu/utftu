@@ -11,9 +11,9 @@
   },
   "keywords": [],
   "author": "",
-  "license": "ISC",
+  "license": "MIT",
   "files": [
-    "dist/**/*"
+    "**/dist/**/*"
   ],
   "devDependencies": {
     "prettier": "^2.7.1",
