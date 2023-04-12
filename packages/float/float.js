@@ -1,4 +1,4 @@
-class Float {
+export class Float {
   static getCommon(float1, float2) {
     const float1Str = String(float1);
     const float2Str = String(float2);
