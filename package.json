@@ -4,7 +4,7 @@
   "description": "",
   "type": "module",
   "main": "./dist/utftu.js",
-  "types": "./dist/types/desy.d.ts",
+  "types": "./dist/types/utftu.d.ts",
   "scripts": {
     "test": "vitest",
     "build": "node ./build.js",
@@ -14,7 +14,7 @@
   "author": "",
   "license": "MIT",
   "files": [
-    "**/dist/**/*"
+    "dist/**/*"
   ],
   "devDependencies": {
     "prettier": "^2.7.1",
