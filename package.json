@@ -2,8 +2,9 @@
   "name": "utftu",
   "version": "1.0.21",
   "description": "",
-  "main": "index.js",
   "type": "module",
+  "main": "./dist/utftu.js",
+  "types": "./dist/types/desy.d.ts",
   "scripts": {
     "test": "vitest",
     "build": "node ./build.js",
@@ -18,28 +19,7 @@
   "devDependencies": {
     "prettier": "^2.7.1",
     "vite": "^4.1.1",
+    "vite-plugin-dts": "^3.1.1",
     "vitest": "^0.28.4"
-  },
-  "exports": {
-    "./controlled-promise": {
-      "import": "./packages/controlled-promise/dist/controlled-promise.js",
-      "require": "./packages/controlled-promise/dist/controlled-promise.cjs"
-    },
-    "./ee": {
-      "import": "./packages/ee/dist/ee.js",
-      "require": "./packages/ee/dist/ee.cjs"
-    },
-    "./float": {
-      "import": "./packages/float/dist/float.js",
-      "require": "./packages/float/dist/float.cjs"
-    },
-    "./delayed-calls": {
-      "import": "./packages/delayed-calls/dist/delayed-calls.js",
-      "require": "./packages/delayed-calls/dist/delayed-calls.cjs"
-    },
-    "./wait-time": {
-      "import": "./packages/wait-time/dist/wait-time.js",
-      "require": "./packages/wait-time/dist/wait-time.cjs"
-    }
   }
 }

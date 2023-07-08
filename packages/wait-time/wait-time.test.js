@@ -1,4 +1,4 @@
-import {waitTime} from './wait-time.js';
+import {waitTime} from './wait-time.ts';
 import {it, expect} from 'vitest';
 
 it('awaitTime', async () => {
