@@ -1,13 +1,18 @@
-type Resolve = (value?: any) => void;
+type Resolve<TValue> = (value?: TValue) => void;
 type Reject = (reason?: any) => void;
 
-export function createControlledPromise(): [
-  Promise<unknown>,
-  {resolve: Resolve; reject: Reject}
+export type PromiseControls<TValue> = {
+  resolve: Resolve<TValue>;
+  reject: Reject;
+};
+
+export function createControlledPromise<TValue>(): [
+  Promise<TValue>,
+  PromiseControls<TValue>
 ] {
-  let resolve!: Resolve;
+  let resolve!: Resolve<TValue>;
   let reject!: Reject;
-  const promise = new Promise((promiseResolve, promiseReject) => {
+  const promise = new Promise<TValue>((promiseResolve, promiseReject) => {
     resolve = promiseResolve;
     reject = promiseReject;
   });
