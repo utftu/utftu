@@ -1,6 +1,6 @@
 {
   "name": "utftu",
-  "version": "1.0.24",
+  "version": "1.0.25",
   "description": "",
   "type": "module",
   "main": "./dist/utftu.js",
