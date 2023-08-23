@@ -1,16 +1,20 @@
-export function createOptimizedFunc<TValue = any>(
+export function createOptimizedValue<TValue = any>(
   func: () => TValue,
-  prod: boolean
-): () => TValue {
-  const symbol = Symbol();
+  prod: boolean,
+  name: string
+): TValue {
+  let value: TValue;
 
-  return () => {
-    if (prod === false) {
-      if (!globalThis[symbol]) {
-        globalThis[symbol] = func();
-      }
-      return globalThis[symbol];
+  if (prod === false) {
+    if (name in globalThis) {
+      value = globalThis[name];
+    } else {
+      globalThis[name] = func();
+      value = globalThis[name];
     }
-    return func();
-  };
+  } else {
+    value = func();
+  }
+
+  return value;
 }
