@@ -1,5 +1,5 @@
 export class Float {
-  static getCommon(float1: number, float2: number) {
+  static getMaxFloatLength(float1: number, float2: number) {
     const float1Str = String(float1);
     const float2Str = String(float2);
 
@@ -10,7 +10,11 @@ export class Float {
       ? float2Str.split('.')[1].length
       : 0;
 
-    const maxLength = Math.max(float1Nums, float2Nums);
+    return Math.max(float1Nums, float2Nums);
+  }
+
+  static getCommon(float1: number, float2: number) {
+    const maxLength = Float.getMaxFloatLength(float1, float2);
 
     return Math.pow(10, maxLength);
   }
