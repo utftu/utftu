@@ -13,7 +13,7 @@ export function createControlledPromise<TValue>(): [
   let resolve!: Resolve<TValue>;
   let reject!: Reject;
   const promise = new Promise<TValue>((promiseResolve, promiseReject) => {
-    resolve = promiseResolve;
+    resolve = promiseResolve as Resolve<TValue>;
     reject = promiseReject;
   });
   return [promise, {resolve, reject}];
