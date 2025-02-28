@@ -39,3 +39,13 @@ export class Float {
     return (float1 * common) / (float2 * common);
   }
 }
+
+export const div = (float1: number, float2: number, addPresitionLength = 2) => {
+  const maxLength = Math.min(
+    Float.getMaxFloatLength(float1, float2) + addPresitionLength,
+    100
+  );
+
+  const rawResult = Float.div(float1, float2);
+  return parseFloat(rawResult.toFixed(maxLength));
+};
