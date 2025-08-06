@@ -6,15 +6,12 @@ export type PromiseControls<TValue> = {
   reject: Reject;
 };
 
-export function createControlledPromise<TValue>(): [
-  Promise<TValue>,
-  PromiseControls<TValue>
-] {
+export function createControlledPromise<TValue>() {
   let resolve!: Resolve<TValue>;
   let reject!: Reject;
   const promise = new Promise<TValue>((promiseResolve, promiseReject) => {
     resolve = promiseResolve as Resolve<TValue>;
     reject = promiseReject;
   });
-  return [promise, {resolve, reject}];
+  return {promise, controls: {resolve, reject}};
 }

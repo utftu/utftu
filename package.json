@@ -17,9 +17,10 @@
     "dist/**/*"
   ],
   "devDependencies": {
-    "prettier": "^3.5.2",
-    "vite": "^6.2.0",
-    "vite-plugin-dts": "^4.5.1",
-    "vitest": "^3.0.7"
+    "dapes": "^0.0.32",
+    "prettier": "^3.6.2",
+    "vite": "^7.0.6",
+    "vite-plugin-dts": "^4.5.4",
+    "vitest": "^3.2.4"
   }
 }

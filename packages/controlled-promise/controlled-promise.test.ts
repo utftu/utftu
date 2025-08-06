@@ -4,15 +4,15 @@ import {waitTime} from '../wait-time/wait-time.ts';
 import {it, expect} from 'vitest';
 
 it('createControlledPromise', async () => {
-  const [promise, control] = createControlledPromise();
+  const {promise, controls} = createControlledPromise();
   expect(util.inspect(promise)).toBe('Promise { <pending> }');
   await waitTime(100);
 
   expect(util.inspect(promise)).toBe('Promise { <pending> }');
 
-  control.resolve(42);
-  control.resolve(undefined);
-  control.reject();
+  controls.resolve(42);
+  controls.resolve(undefined);
+  controls.reject();
 
   expect(await promise).toBe(42);
 });
