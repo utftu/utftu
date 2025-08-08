@@ -7,3 +7,4 @@ export {createEventEmitter, type EE} from './packages/ee/ee.ts';
 export {waitTime} from './packages/wait-time/wait-time.ts';
 export {ValueStore} from './packages/value-store/value-store.ts';
 export {getEnvs, getEnv} from './packages/env/env.ts';
+export {getAbsolutePath} from './packages/path/path.ts';
