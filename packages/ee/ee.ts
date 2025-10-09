@@ -35,11 +35,8 @@ export class EE<TObj extends DefaultRecord = DefaultRecord> {
   }
 }
 
-export function createEventEmitter() {
-  return new EE();
+export function createEventEmitter<
+  TObj extends Record<string, any> = Record<string, any>,
+>() {
+  return new EE<TObj>();
 }
-
-const a = new EE<{a: {type: 'aaa'}}>();
-a.on('a', (props) => {
-  console.log(props.type);
-});
